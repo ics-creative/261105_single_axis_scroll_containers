@@ -1,0 +1,117 @@
+:root {
+  --color-background: #f2f2f2;
+  --color-surface: #fff;
+  --color-text: #222;
+  --color-border: #c8c8c8;
+  --z-index-sticky-row: 1;
+  --z-index-sticky-corner: 2;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  & > header,
+  & > main,
+  & > footer {
+    max-width: 1152px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .table-scroll {
+    margin-block: 32px;
+    overflow: auto clip;
+  }
+
+  .comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 100%;
+    width: max-content;
+    table-layout: fixed;
+
+    .row-heading-column {
+      width: 176px;
+    }
+
+    .country-column {
+      width: 264px;
+    }
+
+    th,
+    td {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-surface);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-index-sticky-corner);
+    }
+
+    thead th:first-child,
+    tbody th {
+      position: sticky;
+      left: 0;
+      min-width: 176px;
+      z-index: var(--z-index-sticky-row);
+    }
+
+    thead th:first-child {
+      z-index: var(--z-index-sticky-corner);
+    }
+
+    td {
+      p {
+        margin: 0;
+      }
+
+      .cell-media {
+        margin: 0;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        figcaption {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .category,
+  .row-label {
+    display: block;
+  }
+
+  .category {
+    font-size: 80%;
+    font-weight: normal;
+  }
+
+  .country-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  .table-note {
+    margin-block: 0 32px;
+  }
+}
