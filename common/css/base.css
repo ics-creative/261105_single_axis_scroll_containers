@@ -1,0 +1,28 @@
+:root {
+  --color-background: #f2f2f2;
+  --color-surface: #fff;
+  --color-text: #222;
+  --color-border: #c8c8c8;
+  --color-heading: #3223b3;
+  --z-index-sticky-row: 1;
+  --z-index-sticky-corner: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}

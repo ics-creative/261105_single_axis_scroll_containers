@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>縦横にスクロールする工程表</title>
+    <link rel="stylesheet" href="../common/css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>プロジェクト工程表</h1>
+      <p class="lead-text">月見出しと工程名を固定し、影を付けます。</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"><span>工程</span></th>
+              <th scope="col"><span>詳細項目</span></th>
+              <th scope="col"><span>4月</span></th>
+              <th scope="col"><span>5月</span></th>
+              <th scope="col"><span>6月</span></th>
+              <th scope="col"><span>7月</span></th>
+              <th scope="col"><span>8月</span></th>
+              <th scope="col"><span>9月</span></th>
+              <th scope="col"><span>10月</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="2"><span>企画</span></th>
+              <th scope="row"><span>企画立案</span></th>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>課題・目的整理</span></th>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>要件</span></th>
+              <th scope="row"><span>現状調査</span></th>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>関係者ヒアリング</span></th>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>要件定義</span></th>
+              <td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>要件レビュー</span></th>
+              <td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>設計</span></th>
+              <th scope="row"><span>情報設計</span></th>
+              <td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>画面設計</span></th>
+              <td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>UIデザイン</span></th>
+              <td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>API設計</span></th>
+              <td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="5"><span>実装</span></th>
+              <th scope="row"><span>開発環境構築</span></th>
+              <td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>フロントエンド実装</span></th>
+              <td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>API実装</span></th>
+              <td></td><td></td><td></td>
+              <td colspan="3"><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>データ移行処理</span></th>
+              <td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>コードレビュー</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>テスト</span></th>
+              <th scope="row"><span>単体テスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>結合テスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>受け入れテスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>不具合修正</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3"><span>リリース</span></th>
+              <th scope="row"><span>リリース計画</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>本番リリース</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>振り返り</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
