@@ -46,7 +46,7 @@ main {
 
       thead {
         th {
-          /* 上見出しを画面上部に固定 */
+          /* 列見出しを画面上部に固定 */
           position: sticky;
           top: 0;
           z-index: 2;
@@ -65,7 +65,7 @@ main {
 
       tbody {
         th[scope="rowgroup"] {
-          /* 横見出しをテーブル左側に固定 */
+          /* 行見出しをテーブル左側に固定 */
           position: sticky;
           left: 0;
           z-index: 2;
@@ -73,9 +73,9 @@ main {
         }
 
         th[scope="row"] {
-          /* 横見出しをテーブル左側に固定 */
+          /* 行見出しをテーブル左側に固定 */
           position: sticky;
-          left: 160px; /* 1セル分右で固定させる */
+          left: 160px; /* 1セル分右側で固定させる */
           z-index: 1;
           font-size: 14px;
         }

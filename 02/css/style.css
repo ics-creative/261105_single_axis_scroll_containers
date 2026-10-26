@@ -2,118 +2,227 @@ main {
   max-width: 1200px;
   margin-inline: auto;
   padding: 40px 40px 80vh;
-}
 
-h1 {
-  color: var(--color-heading);
-  font-size: 42px;
-  margin-bottom: 40px;
-}
+  h1 {
+    color: var(--color-heading);
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
 
-.lead-text {
-  margin-bottom: 24px;
-}
+  .lead-text {
+    margin-bottom: 24px;
+  }
 
-.table-scroll {
-  /* 横方向だけスクロールさせる */
-  overflow: auto clip;
+  .table-scroll {
+    /* 横方向だけスクロールさせる */
+    overflow: auto clip;
+    display: grid;
+    grid-template-columns: max-content;
+    container-type: scroll-state; /* スクロール状態を判定可能に */
+    container-name: table-scroll; /* テーブルの参照名 */
 
-  table {
-    border-collapse: separate;
-    border-spacing: 0;
-    table-layout: fixed;
-    width: max-content;
+    table {
+      grid-area: 1 / 1;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+      width: max-content;
 
-    th,
-    td {
-      box-sizing: border-box;
-      min-width: 0;
-      width: 256px;
-      padding: 12px;
-      border: 0;
-      border-right: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      background-color: var(--color-surface);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th:first-child {
-      width: 156px;
-    }
-
-    thead {
-      /* 列見出しを上部に固定 */
-      position: sticky;
-      top: 0;
-      z-index: var(--z-index-sticky-corner);
+      th,
+      td {
+        box-sizing: border-box;
+        min-width: 0;
+        width: 256px;
+        padding: 12px;
+        border: 0;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        background-color: var(--color-surface);
+        text-align: left;
+        vertical-align: top;
+      }
 
       th {
-        border-top: 1px solid var(--color-border);
-
         &:first-child {
+          width: 156px;
+        }
+      }
+
+      thead {
+        /* 列見出しを上部に固定 */
+        position: sticky;
+        top: 0;
+        z-index: var(--z-index-sticky-corner);
+        container-type: scroll-state; /* スクロール状態を判定可能に */
+        container-name: column-heading; /* 列見出しの参照名 */
+
+        th {
+          position: relative;
+          border-top: 1px solid var(--color-border);
+
+          &::after {
+            content: "";
+            position: absolute;
+            inset: auto -1px -9px 0;
+            height: 8px;
+            background: linear-gradient(to bottom, rgb(0 0 0 / 18%), transparent);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s var(--ease-expo-out);
+          }
+
+          &:first-child {
+            position: sticky;
+            left: 0;
+            z-index: var(--z-index-sticky-corner);
+            border-left: 1px solid var(--color-border);
+            container-type: scroll-state; /* スクロール状態を判定可能に */
+            container-name: row-heading; /* 行見出しの参照名 */
+          }
+
+          &:not(:first-child) {
+            font-size: 28px;
+            transition: font-size 0.3s var(--ease-expo-out);
+          }
+
+          .country-heading {
+            display: flex;
+            align-items: center;
+            /* 文字の縮小で高さが変わり、スクロール位置が補正されるのを防ぐ */
+            min-height: 45px;
+
+            .country-flag {
+              display: grid;
+              grid-template-columns: 0fr;
+              transition: grid-template-columns 0.3s var(--ease-expo-out);
+
+              > span {
+                min-width: 0;
+                overflow: clip;
+
+                img {
+                  display: block;
+                  width: 28px;
+                  height: 20px;
+                  margin-right: 8px;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+
+          /* 上見出しが上端に固定されている場合 */
+          @container column-heading scroll-state(stuck: top) {
+            &::after {
+              opacity: 1;
+            }
+
+            &:not(:first-child) {
+              font-size: 18px;
+            }
+
+            .country-heading {
+              .country-flag {
+                grid-template-columns: 1fr;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        th {
+          /* 行見出しを左側に固定 */
           position: sticky;
           left: 0;
-          z-index: var(--z-index-sticky-corner);
+          z-index: var(--z-index-sticky-row);
           border-left: 1px solid var(--color-border);
+          container-type: scroll-state; /* スクロール状態を判定可能に */
+          container-name: row-heading; /* 行見出しの参照名 */
         }
 
-        &:not(:first-child) {
-          font-size: 28px;
+        td {
+          ul {
+            padding-left: 1.25em;
+          }
+
+          figure {
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            figcaption {
+              margin-top: 8px;
+            }
+          }
+        }
+
+        .flag-row {
+          img {
+            display: block;
+            width: 100%;
+            height: 158px;
+            object-fit: contain;
+          }
+        }
+
+        .attraction-row {
+          img {
+            width: 100%;
+            height: 358px;
+            object-fit: cover;
+          }
+        }
+
+        .dish-row {
+          img {
+            width: 100%;
+            height: 158px;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .row-heading {
+        /* 境界で影が途切れないよう、外側へ向かうグラデーションを使う */
+        &::after {
+          content: "";
+          position: absolute;
+          inset: -1px -9px -1px auto;
+          width: 8px;
+          background: linear-gradient(to right, rgb(0 0 0 / 18%), transparent);
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.3s var(--ease-expo-out);
+        }
+
+        /* 行見出しが左端に固定されている場合 */
+        @container row-heading scroll-state(stuck: left) {
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
 
-    tbody {
-      th {
-        /* 行見出しを左側に固定 */
-        position: sticky;
-        left: 0;
-        z-index: var(--z-index-sticky-row);
-        border-left: 1px solid var(--color-border);
-      }
-    }
+    /* テーブルと同じ領域に重ね、表示範囲の右端へ追従させる */
+    .scroll-shadow {
+      grid-area: 1 / 1;
+      justify-self: end;
+      position: sticky;
+      right: 0;
+      z-index: calc(var(--z-index-sticky-corner) + 1);
+      width: 8px;
+      background: linear-gradient(to left, rgb(0 0 0 / 18%), transparent);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s var(--ease-expo-out);
 
-    .flag-row {
-      img {
-        display: block;
-        width: 100%;
-        height: 158px;
-        object-fit: contain;
-      }
-    }
-
-    .attraction-row {
-      img {
-        width: 100%;
-        height: 358px;
-        object-fit: cover;
-      }
-    }
-
-    .dish-row {
-      img {
-        width: 100%;
-        height: 158px;
-        object-fit: cover;
-      }
-    }
-
-    td {
-      ul {
-        padding-left: 1.25em;
-      }
-
-      figure {
-        img {
-          display: block;
-          width: 100%;
-          height: auto;
-        }
-
-        figcaption {
-          margin-top: 8px;
-        }
+      /* 右方向にまだスクロールできる場合 */
+      @container table-scroll scroll-state(scrollable: right) {
+        opacity: 1;
       }
     }
   }

@@ -6,6 +6,7 @@
   --color-heading: #3223b3;
   --z-index-sticky-row: 1;
   --z-index-sticky-corner: 2;
+  --ease-expo-out: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 * {
