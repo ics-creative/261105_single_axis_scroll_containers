@@ -3,63 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>縦横にスクロールする工程表</title>
+    <title>demo - Project Timeline</title>
     <link rel="stylesheet" href="../common/css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main>
-      <h1>プロジェクト工程表</h1>
-      <p class="lead-text">月見出しと工程名を固定し、影を付けます。</p>
+      <h1>Project Timeline</h1>
+      <p class="lead-text">月と工程の見出しを表示したまま、スケジュールを縦横にスクロールできます。</p>
 
       <div class="table-scroll">
         <table>
           <thead>
             <tr>
-              <th scope="col"><span>工程</span></th>
-              <th scope="col"><span>詳細項目</span></th>
-              <th scope="col"><span>4月</span></th>
-              <th scope="col"><span>5月</span></th>
-              <th scope="col"><span>6月</span></th>
-              <th scope="col"><span>7月</span></th>
-              <th scope="col"><span>8月</span></th>
-              <th scope="col"><span>9月</span></th>
-              <th scope="col"><span>10月</span></th>
+              <th scope="col">工程</th>
+              <th scope="col">詳細項目</th>
+              <th scope="col">4月</th>
+              <th scope="col">5月</th>
+              <th scope="col">6月</th>
+              <th scope="col">7月</th>
+              <th scope="col">8月</th>
+              <th scope="col">9月</th>
+              <th scope="col">10月</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="2"><span>企画</span></th>
-              <th scope="row"><span>企画立案</span></th>
+              <th scope="rowgroup" rowspan="2">企画</th>
+              <th scope="row">企画立案</th>
               <td><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>課題・目的整理</span></th>
+              <th scope="row">課題・目的整理</th>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td><td></td>
             </tr>
           </tbody>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="4"><span>要件</span></th>
-              <th scope="row"><span>現状調査</span></th>
+              <th scope="rowgroup" rowspan="4">要件</th>
+              <th scope="row">現状調査</th>
               <td><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>関係者ヒアリング</span></th>
+              <th scope="row">関係者ヒアリング</th>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>要件定義</span></th>
+              <th scope="row">要件定義</th>
               <td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>要件レビュー</span></th>
+              <th scope="row">要件レビュー</th>
               <td></td><td></td>
               <td><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td>
@@ -67,26 +67,26 @@
           </tbody>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="4"><span>設計</span></th>
-              <th scope="row"><span>情報設計</span></th>
+              <th scope="rowgroup" rowspan="4">設計</th>
+              <th scope="row">情報設計</th>
               <td></td>
               <td><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>画面設計</span></th>
+              <th scope="row">画面設計</th>
               <td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>UIデザイン</span></th>
+              <th scope="row">UIデザイン</th>
               <td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>API設計</span></th>
+              <th scope="row">API設計</th>
               <td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td><td></td>
@@ -94,32 +94,32 @@
           </tbody>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="5"><span>実装</span></th>
-              <th scope="row"><span>開発環境構築</span></th>
+              <th scope="rowgroup" rowspan="5">実装</th>
+              <th scope="row">開発環境構築</th>
               <td></td><td></td>
               <td><span class="bar"></span></td>
               <td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>フロントエンド実装</span></th>
+              <th scope="row">フロントエンド実装</th>
               <td></td><td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <th scope="row"><span>API実装</span></th>
+              <th scope="row">API実装</th>
               <td></td><td></td><td></td>
               <td colspan="3"><span class="bar"></span></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row"><span>データ移行処理</span></th>
+              <th scope="row">データ移行処理</th>
               <td></td><td></td><td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row"><span>コードレビュー</span></th>
+              <th scope="row">コードレビュー</th>
               <td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
               <td></td>
@@ -127,42 +127,42 @@
           </tbody>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="4"><span>テスト</span></th>
-              <th scope="row"><span>単体テスト</span></th>
+              <th scope="rowgroup" rowspan="4">テスト</th>
+              <th scope="row">単体テスト</th>
               <td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row"><span>結合テスト</span></th>
+              <th scope="row">結合テスト</th>
               <td></td><td></td><td></td><td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
             </tr>
             <tr>
-              <th scope="row"><span>受け入れテスト</span></th>
+              <th scope="row">受け入れテスト</th>
               <td></td><td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
             </tr>
             <tr>
-              <th scope="row"><span>不具合修正</span></th>
+              <th scope="row">不具合修正</th>
               <td></td><td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
             </tr>
           </tbody>
           <tbody>
             <tr>
-              <th scope="rowgroup" rowspan="3"><span>リリース</span></th>
-              <th scope="row"><span>リリース計画</span></th>
+              <th scope="rowgroup" rowspan="3">リリース</th>
+              <th scope="row">リリース計画</th>
               <td></td><td></td><td></td><td></td><td></td>
               <td colspan="2"><span class="bar"></span></td>
             </tr>
             <tr>
-              <th scope="row"><span>本番リリース</span></th>
+              <th scope="row">本番リリース</th>
               <td></td><td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
             </tr>
             <tr>
-              <th scope="row"><span>振り返り</span></th>
+              <th scope="row">振り返り</th>
               <td></td><td></td><td></td><td></td><td></td><td></td>
               <td><span class="bar"></span></td>
             </tr>

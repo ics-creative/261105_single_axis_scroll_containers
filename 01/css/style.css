@@ -35,16 +35,6 @@ main {
       }
 
       th {
-        padding: 0;
-
-        > span {
-          --shadow-top: 0 0 0 transparent;
-          --shadow-edge: 0 0 0 transparent;
-          display: block;
-          padding: 12px;
-          box-shadow: var(--shadow-top), var(--shadow-edge);
-        }
-
         &:first-child {
           width: 160px;
         }
@@ -60,19 +50,15 @@ main {
           position: sticky;
           top: 0;
           z-index: 2;
-          container-type: scroll-state;
-          container-name: sticky-top;
 
           &:first-child {
             left: 0;
             z-index: 5;
-            container-name: sticky-top sticky-left;
           }
 
           &:nth-child(2) {
             left: 160px;
             z-index: 4;
-            container-name: sticky-top sticky-left;
           }
         }
       }
@@ -83,8 +69,6 @@ main {
           position: sticky;
           left: 0;
           z-index: 2;
-          container-type: scroll-state;
-          container-name: sticky-left;
           vertical-align: top;
         }
 
@@ -93,13 +77,7 @@ main {
           position: sticky;
           left: 160px; /* 1セル分右で固定させる */
           z-index: 1;
-          container-type: scroll-state;
-          container-name: sticky-left;
-
-          > span {
-            font-size: 14px;
-            clip-path: inset(0 -12px 0 0);
-          }
+          font-size: 14px;
         }
 
         tr:hover {
@@ -118,21 +96,6 @@ main {
         display: block;
         height: 16px;
         background: var(--color-heading);
-      }
-
-      /* 上部に固定されたら下に影を表示 */
-      @container sticky-top scroll-state(stuck: top) {
-        thead th > span {
-          --shadow-top: 0 6px 6px #0004;
-        }
-      }
-
-      /* 左側に固定されたら右に影を表示 */
-      @container sticky-left scroll-state(stuck: left) {
-        thead th:nth-child(2) > span,
-        tbody th[scope="row"] > span {
-          --shadow-edge: 6px 0 6px #0004;
-        }
       }
     }
   }
