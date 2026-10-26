@@ -3,165 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>demo - European Country Comparison</title>
+    <title>縦横にスクロールする工程表</title>
     <link rel="stylesheet" href="../common/css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main>
-      <h1>Compare Your Next European Destination</h1>
-      <p class="lead-text">
-        ヨーロッパの国別比較表です。
-      </p>
+      <h1>プロジェクト工程表</h1>
+      <p class="lead-text">月見出しと工程名を固定し、影を付けます。</p>
 
       <div class="table-scroll">
         <table>
           <thead>
             <tr>
-              <th scope="col"></th>
-              <th scope="col">France</th>
-              <th scope="col">Italy</th>
-              <th scope="col">Spain</th>
-              <th scope="col">Portugal</th>
-              <th scope="col">Germany</th>
-              <th scope="col">Switzerland</th>
-              <th scope="col">Greece</th>
-              <th scope="col">Netherlands</th>
+              <th scope="col"><span>工程</span></th>
+              <th scope="col"><span>詳細項目</span></th>
+              <th scope="col"><span>4月</span></th>
+              <th scope="col"><span>5月</span></th>
+              <th scope="col"><span>6月</span></th>
+              <th scope="col"><span>7月</span></th>
+              <th scope="col"><span>8月</span></th>
+              <th scope="col"><span>9月</span></th>
+              <th scope="col"><span>10月</span></th>
             </tr>
           </thead>
           <tbody>
-          <tr class="flag-row">
-            <th scope="row">国旗</th>
-            <td><img src="images/france/flag.svg" alt="フランスの国旗" width="60" height="40" /></td>
-            <td><img src="images/italy/flag.svg" alt="イタリアの国旗" width="60" height="40" /></td>
-            <td><img src="images/spain/flag.svg" alt="スペインの国旗" width="60" height="40" /></td>
-            <td><img src="images/portugal/flag.svg" alt="ポルトガルの国旗" width="60" height="40" /></td>
-            <td><img src="images/germany/flag.svg" alt="ドイツの国旗" width="60" height="40" /></td>
-            <td><img src="images/switzerland/flag.svg" alt="スイスの国旗" width="60" height="40" /></td>
-            <td><img src="images/greece/flag.svg" alt="ギリシャの国旗" width="60" height="40" /></td>
-            <td><img src="images/netherlands/flag.svg" alt="オランダの国旗" width="60" height="40" /></td>
-          </tr>
-          <tr>
-            <th scope="row">国の特徴</th>
-            <td><p>芸術と美食、地方ごとの風景を楽しむ国</p></td>
-              <td><p>古代遺跡と街の暮らしが隣り合う国</p></td>
-              <td><p>建築、食、海辺の時間を楽しめる国</p></td>
-              <td><p>大西洋の景色と素朴な街歩きが魅力の国</p></td>
-              <td><p>歴史ある街と森や川の風景が広がる国</p></td>
-              <td><p>アルプスの山岳風景と鉄道旅を楽しむ国</p></td>
-              <td><p>遺跡と島々、地中海の食を味わう国</p></td>
-              <td><p>運河と自転車のある街を巡る国</p></td>
-          </tr>
-          <tr>
-            <th scope="row">首都</th>
-            <td><p>パリ</p></td>
-              <td><p>ローマ</p></td>
-              <td><p>マドリード</p></td>
-              <td><p>リスボン</p></td>
-              <td><p>ベルリン</p></td>
-              <td><p>ベルン</p></td>
-              <td><p>アテネ</p></td>
-              <td><p>アムステルダム</p></td>
-          </tr>
-          <tr>
-            <th scope="row">人口</th>
-            <td><p>約6,800万人</p></td>
-              <td><p>約5,900万人</p></td>
-              <td><p>約4,900万人</p></td>
-              <td><p>約1,000万人</p></td>
-              <td><p>約8,400万人</p></td>
-              <td><p>約900万人</p></td>
-              <td><p>約1,000万人</p></td>
-              <td><p>約1,800万人</p></td>
-          </tr>
-          <tr>
-            <th scope="row">主な言語</th>
-            <td><p>フランス語</p></td>
-              <td><p>イタリア語</p></td>
-              <td><p>スペイン語</p></td>
-              <td><p>ポルトガル語</p></td>
-              <td><p>ドイツ語</p></td>
-              <td><p>ドイツ語・フランス語・イタリア語・ロマンシュ語</p></td>
-              <td><p>ギリシャ語</p></td>
-              <td><p>オランダ語</p></td>
-          </tr>
-          <tr>
-            <th scope="row">通貨</th>
-            <td><p>ユーロ（EUR）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-              <td><p>スイスフラン（CHF）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-              <td><p>ユーロ（EUR）</p></td>
-          </tr>
-          <tr class="attraction-row">
-            <th scope="row">観光名所</th>
-            <td><figure><img src="images/france/attraction-1.avif" alt="パリのエッフェル塔" width="320" height="213" loading="lazy" /><figcaption>エッフェル塔</figcaption></figure></td>
-              <td><figure><img src="images/italy/attraction-1.avif" alt="ローマのコロッセオ" width="320" height="213" loading="lazy" /><figcaption>コロッセオ</figcaption></figure></td>
-              <td><figure><img src="images/spain/attraction-1.avif" alt="バルセロナのサグラダ・ファミリア" width="320" height="213" loading="lazy" /><figcaption>サグラダ・ファミリア</figcaption></figure></td>
-              <td><figure><img src="images/portugal/attraction-1.avif" alt="リスボンのベレンの塔" width="320" height="213" loading="lazy" /><figcaption>ベレンの塔</figcaption></figure></td>
-              <td><figure><img src="images/germany/attraction-1.avif" alt="ベルリンのブランデンブルク門" width="320" height="213" loading="lazy" /><figcaption>ブランデンブルク門</figcaption></figure></td>
-              <td><figure><img src="images/switzerland/attraction-1.avif" alt="マッターホルン" width="320" height="213" loading="lazy" /><figcaption>マッターホルン</figcaption></figure></td>
-              <td><figure><img src="images/greece/attraction-1.avif" alt="アテネのアクロポリス" width="320" height="213" loading="lazy" /><figcaption>アクロポリス</figcaption></figure></td>
-              <td><figure><img src="images/netherlands/attraction-1.avif" alt="アムステルダムの運河" width="320" height="213" loading="lazy" /><figcaption>アムステルダム運河</figcaption></figure></td>
-          </tr>
-          <tr>
-            <th scope="row">他の観光名所</th>
-            <td><ul><li>モンマルトル</li><li>セーヌ川沿い</li><li>ルーヴル美術館</li></ul></td>
-              <td><ul><li>ボローニャのアーケード</li><li>マッジョーレ広場</li><li>ヴェネツィアの大運河</li></ul></td>
-              <td><ul><li>バルセロナのゴシック地区</li><li>アルハンブラ宮殿</li><li>セビリアのスペイン広場</li></ul></td>
-              <td><ul><li>リスボンのアルファマ地区</li><li>シントラのペーナ宮殿</li><li>ポルトのリベイラ地区</li></ul></td>
-              <td><ul><li>ベルリンのミッテ地区</li><li>博物館島</li><li>ベルリン大聖堂</li></ul></td>
-              <td><ul><li>ベルン旧市街</li><li>ルツェルンのカペル橋</li><li>ユングフラウ地方</li></ul></td>
-              <td><ul><li>アテネのプラカ地区</li><li>メテオラ</li><li>サマリア渓谷</li></ul></td>
-              <td><ul><li>アムステルダムのヨルダーン地区</li><li>アムステルダムの運河</li><li>アムステルダム国立美術館</li></ul></td>
-          </tr>
-          <tr>
-            <th scope="row">世界遺産</th>
-            <td><ul><li>モン・サン＝ミシェルとその湾</li><li>ヴェルサイユ宮殿と庭園</li><li>パリのセーヌ河岸</li></ul></td>
-              <td><ul><li>ローマ歴史地区</li><li>ヴェネツィアとその潟</li><li>フィレンツェ歴史地区</li></ul></td>
-              <td><ul><li>アルハンブラ、ヘネラリーフェ、アルバイシン地区</li><li>アントニ・ガウディの作品群</li><li>コルドバ歴史地区</li></ul></td>
-              <td><ul><li>シントラの文化的景観</li><li>ポルト歴史地区</li><li>ジェロニモス修道院とベレンの塔</li></ul></td>
-              <td><ul><li>ベルリンの博物館島</li><li>ケルン大聖堂</li><li>ポツダムとベルリンの宮殿群と公園群</li></ul></td>
-              <td><ul><li>ベルン旧市街</li><li>スイス・アルプスのユングフラウ＝アレッチュ</li><li>ラヴォー地区の葡萄畑テラス</li></ul></td>
-              <td><ul><li>アテネのアクロポリス</li><li>メテオラ</li><li>ロドス島の中世都市</li></ul></td>
-              <td><ul><li>アムステルダムの17世紀運河環状地区</li><li>キンデルダイク＝エルスハウトの風車網</li><li>スホクラントとその周辺</li></ul></td>
-          </tr>
-          <tr class="dish-row">
-            <th scope="row">名物料理</th>
-            <td><figure><img src="images/france/dish.avif" alt="南仏のブイヤベース" width="320" height="213" loading="lazy" /><figcaption>ブイヤベース</figcaption></figure></td>
-              <td><figure><img src="images/italy/dish.avif" alt="ナポリのピッツァ" width="320" height="213" loading="lazy" /><figcaption>ピッツァ・ナポレターナ</figcaption></figure></td>
-              <td><figure><img src="images/spain/dish.avif" alt="スペインのパエリア" width="320" height="213" loading="lazy" /><figcaption>パエリア</figcaption></figure></td>
-              <td><figure><img src="images/portugal/dish.avif" alt="ポルトガルのバカリャウ料理" width="320" height="213" loading="lazy" /><figcaption>バカリャウ</figcaption></figure></td>
-              <td><figure><img src="images/germany/dish.avif" alt="ドイツのシュニッツェル" width="320" height="213" loading="lazy" /><figcaption>シュニッツェル</figcaption></figure></td>
-              <td><figure><img src="images/switzerland/dish.avif" alt="スイスのチーズフォンデュ" width="320" height="213" loading="lazy" /><figcaption>チーズフォンデュ</figcaption></figure></td>
-              <td><figure><img src="images/greece/dish.avif" alt="ギリシャのギロ" width="320" height="213" loading="lazy" /><figcaption>ギロ</figcaption></figure></td>
-              <td><figure><img src="images/netherlands/dish.avif" alt="オランダのビターバレン" width="320" height="213" loading="lazy" /><figcaption>ビターバレン</figcaption></figure></td>
-          </tr>
-          <tr>
-            <th scope="row">国内の主な移動手段</th>
-            <td><p>高速鉄道TGV、都市の地下鉄・路面電車。</p></td>
-              <td><p>都市間鉄道、地下鉄、バス。</p></td>
-              <td><p>高速鉄道AVE、地下鉄、バス。</p></td>
-              <td><p>都市間鉄道、路面電車、地下鉄。</p></td>
-              <td><p>鉄道、都市交通、長距離バス。</p></td>
-              <td><p>鉄道・バス網、山岳鉄道、ロープウェイ。</p></td>
-              <td><p>都市間バス、鉄道、島へのフェリー。</p></td>
-              <td><p>鉄道、路面電車、バス、自転車。</p></td>
-          </tr>
-          <tr>
-            <th scope="row">こんな人におすすめ</th>
-            <td><p>美術館、街歩き、食をじっくり楽しみたい人。</p></td>
-              <td><p>古代遺跡、建築、郷土料理に興味がある人。</p></td>
-              <td><p>街の文化と海辺の休暇を両方楽しみたい人。</p></td>
-              <td><p>海辺の景色や、ゆったりした街歩きが好きな人。</p></td>
-              <td><p>歴史ある街、森、鉄道旅を組み合わせたい人。</p></td>
-              <td><p>山や湖の景色、ハイキングを楽しみたい人。</p></td>
-              <td><p>遺跡、島巡り、地中海の食を楽しみたい人。</p></td>
-              <td><p>運河沿いの街歩きや自転車旅が好きな人。</p></td>
-          </tr>
+            <tr>
+              <th scope="rowgroup" rowspan="2"><span>企画</span></th>
+              <th scope="row"><span>企画立案</span></th>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>課題・目的整理</span></th>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>要件</span></th>
+              <th scope="row"><span>現状調査</span></th>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>関係者ヒアリング</span></th>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>要件定義</span></th>
+              <td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>要件レビュー</span></th>
+              <td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>設計</span></th>
+              <th scope="row"><span>情報設計</span></th>
+              <td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>画面設計</span></th>
+              <td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>UIデザイン</span></th>
+              <td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>API設計</span></th>
+              <td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td><td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="5"><span>実装</span></th>
+              <th scope="row"><span>開発環境構築</span></th>
+              <td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>フロントエンド実装</span></th>
+              <td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>API実装</span></th>
+              <td></td><td></td><td></td>
+              <td colspan="3"><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>データ移行処理</span></th>
+              <td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>コードレビュー</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4"><span>テスト</span></th>
+              <th scope="row"><span>単体テスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>結合テスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>受け入れテスト</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>不具合修正</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3"><span>リリース</span></th>
+              <th scope="row"><span>リリース計画</span></th>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td colspan="2"><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>本番リリース</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span>振り返り</span></th>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td><span class="bar"></span></td>
+            </tr>
           </tbody>
         </table>
       </div>

@@ -2,117 +2,136 @@ main {
   max-width: 1200px;
   margin-inline: auto;
   padding: 40px 40px 80vh;
-}
 
-h1 {
-  color: var(--color-heading);
-  font-size: 42px;
-  margin-bottom: 40px;
-}
+  h1 {
+    margin-bottom: 40px;
+    color: var(--color-heading);
+    font-size: 42px;
+  }
 
-.lead-text {
-  margin-bottom: 24px;
-}
+  .lead-text {
+    margin-bottom: 24px;
+  }
 
-.table-scroll {
-  /* 横方向だけスクロールさせる */
-  overflow: auto clip;
+  .table-scroll {
+    /* 横方向だけスクロールさせる */
+    overflow: auto clip;
 
-  table {
-    border-collapse: separate;
-    border-spacing: 0;
-    table-layout: fixed;
-    width: max-content;
+    table {
+      width: max-content;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
 
-    th,
-    td {
-      box-sizing: border-box;
-      min-width: 0;
-      width: 256px;
-      padding: 12px;
-      border: 0;
-      border-right: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      background-color: var(--color-surface);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th:first-child {
-      width: 156px;
-    }
-
-    thead {
-      /* 列見出しを上部に固定 */
-      position: sticky;
-      top: 0;
-      z-index: var(--z-index-sticky-corner);
+      th,
+      td {
+        box-sizing: border-box;
+        width: 180px;
+        padding: 12px;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-surface);
+        text-align: left;
+      }
 
       th {
-        border-top: 1px solid var(--color-border);
+        padding: 0;
+
+        > span {
+          --shadow-top: 0 0 0 transparent;
+          --shadow-edge: 0 0 0 transparent;
+          display: block;
+          padding: 12px;
+          box-shadow: var(--shadow-top), var(--shadow-edge);
+        }
 
         &:first-child {
+          width: 160px;
+        }
+
+        &:nth-child(2) {
+          width: 220px;
+        }
+      }
+
+      thead {
+        th {
+          /* 上見出しを画面上部に固定 */
+          position: sticky;
+          top: 0;
+          z-index: 2;
+          container-type: scroll-state;
+          container-name: sticky-top;
+
+          &:first-child {
+            left: 0;
+            z-index: 5;
+            container-name: sticky-top sticky-left;
+          }
+
+          &:nth-child(2) {
+            left: 160px;
+            z-index: 4;
+            container-name: sticky-top sticky-left;
+          }
+        }
+      }
+
+      tbody {
+        th[scope="rowgroup"] {
+          /* 横見出しをテーブル左側に固定 */
           position: sticky;
           left: 0;
-          z-index: var(--z-index-sticky-corner);
-          border-left: 1px solid var(--color-border);
+          z-index: 2;
+          container-type: scroll-state;
+          container-name: sticky-left;
+          vertical-align: top;
         }
 
-        &:not(:first-child) {
-          font-size: 28px;
+        th[scope="row"] {
+          /* 横見出しをテーブル左側に固定 */
+          position: sticky;
+          left: 160px; /* 1セル分右で固定させる */
+          z-index: 1;
+          container-type: scroll-state;
+          container-name: sticky-left;
+
+          > span {
+            font-size: 14px;
+            clip-path: inset(0 -12px 0 0);
+          }
+        }
+
+        tr:hover {
+          > th[scope="row"],
+          > td {
+            background-color: color-mix(in srgb, var(--color-heading) 8%, white);
+          }
+        }
+
+        &:has(tr:hover) > tr:first-child > th[scope="rowgroup"] {
+          background-color: color-mix(in srgb, var(--color-heading) 8%, white);
         }
       }
-    }
 
-    tbody {
-      th {
-        /* 行見出しを左側に固定 */
-        position: sticky;
-        left: 0;
-        z-index: var(--z-index-sticky-row);
-        border-left: 1px solid var(--color-border);
-      }
-    }
-
-    .flag-row {
-      img {
+      .bar {
         display: block;
-        width: 100%;
-        height: 158px;
-        object-fit: contain;
-      }
-    }
-
-    .attraction-row {
-      img {
-        width: 100%;
-        height: 358px;
-        object-fit: cover;
-      }
-    }
-
-    .dish-row {
-      img {
-        width: 100%;
-        height: 158px;
-        object-fit: cover;
-      }
-    }
-
-    td {
-      ul {
-        padding-left: 1.25em;
+        height: 16px;
+        background: var(--color-heading);
       }
 
-      figure {
-        img {
-          display: block;
-          width: 100%;
-          height: auto;
+      /* 上部に固定されたら下に影を表示 */
+      @container sticky-top scroll-state(stuck: top) {
+        thead th > span {
+          --shadow-top: 0 6px 6px #0004;
         }
+      }
 
-        figcaption {
-          margin-top: 8px;
+      /* 左側に固定されたら右に影を表示 */
+      @container sticky-left scroll-state(stuck: left) {
+        thead th:nth-child(2) > span,
+        tbody th[scope="row"] > span {
+          --shadow-edge: 6px 0 6px #0004;
         }
       }
     }
