@@ -56,6 +56,7 @@ main {
 
       thead {
         th {
+          /* 上見出しを画面上部に固定 */
           position: sticky;
           top: 0;
           z-index: 2;
@@ -78,6 +79,7 @@ main {
 
       tbody {
         th[scope="rowgroup"] {
+          /* 横見出しをテーブル左側に固定 */
           position: sticky;
           left: 0;
           z-index: 2;
@@ -87,8 +89,9 @@ main {
         }
 
         th[scope="row"] {
+          /* 横見出しをテーブル左側に固定 */
           position: sticky;
-          left: 160px;
+          left: 160px; /* 1セル分右で固定させる */
           z-index: 1;
           container-type: scroll-state;
           container-name: sticky-left;
@@ -117,12 +120,14 @@ main {
         background: var(--color-heading);
       }
 
+      /* 上部に固定されたら下に影を表示 */
       @container sticky-top scroll-state(stuck: top) {
         thead th > span {
           --shadow-top: 0 6px 6px #0004;
         }
       }
 
+      /* 左側に固定されたら右に影を表示 */
       @container sticky-left scroll-state(stuck: left) {
         thead th:nth-child(2) > span,
         tbody th[scope="row"] > span {
