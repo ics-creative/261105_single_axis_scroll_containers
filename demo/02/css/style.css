@@ -227,3 +227,13 @@ main {
     }
   }
 }
+
+@media (width < 768px) {
+  main .table-scroll table {
+    th {
+      &:first-child {
+        width: 120px;
+      }
+    }
+  }
+}

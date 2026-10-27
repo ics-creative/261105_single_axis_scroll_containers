@@ -100,3 +100,39 @@ main {
     }
   }
 }
+
+@media (width < 768px) {
+  main .table-scroll table {
+    th,
+    td {
+      width: 140px;
+    }
+
+    th {
+      &:first-child {
+        width: 120px;
+      }
+
+      &:nth-child(2) {
+        width: 180px;
+      }
+    }
+
+    thead {
+      th {
+        &:nth-child(2) {
+          left: auto;
+          z-index: 2;
+        }
+      }
+    }
+
+    tbody {
+      th[scope="row"] {
+        position: static;
+        left: auto;
+        z-index: auto;
+      }
+    }
+  }
+}
