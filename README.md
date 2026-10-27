@@ -2,12 +2,12 @@ ICS MEDIAの記事「横スクロールと見出し固定を両立したい！ �
 
 ## デモ一覧
 
-- [プロジェクト工程表](demo/01/index.html)：工程表
-- [ヨーロッパの国別比較表](demo/02/index.html)：国別比較テーブル
+- [プロジェクト工程表](demo/01/index.html)
+- [ヨーロッパの国別比較表](demo/02/index.html)
 
 ## 画像の出典
 
-本プロジェクトで使用している画像の出典は以下のとおりです。
+本デモで使用している画像の出典は以下のとおりです。
 
 - 国旗：[Flagpedia](https://flagpedia.net/)
 - 写真：[Unsplash 日本語版](https://unsplash.com/ja)
