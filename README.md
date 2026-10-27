@@ -1,4 +1,13 @@
-# 261112_single_axis_scroll_containers
+## 261112_single_axis_scroll_containers
+
+ICS MEDIAの記事「横スクロールと見出し固定を両立したい！ 軸ごとに進化するCSSのsticky」で紹介しているデモのソースコードです。 ビルド不要の素のHTML / CSSで書かれています。
+
+## デモ一覧
+
+| デモ | 内容 |
+| --- | --- |
+| [プロジェクト工程表](demo/01/index.html) | 工程表 |
+| [ヨーロッパの国別比較表](demo/02/index.html) | 国別比較テーブル |
 
 ## 画像の出典
 
@@ -6,6 +15,17 @@
 
 - 国旗：[Flagpedia](https://flagpedia.net/)
 - 写真：[Unsplash 日本語版](https://unsplash.com/ja)
+
+### 国旗
+
+- [フランスの国旗](https://flagpedia.net/france/download/vector)
+- [イタリアの国旗](https://flagpedia.net/italy/download/vector)
+- [スペインの国旗](https://flagpedia.net/spain/download/vector)
+- [ポルトガルの国旗](https://flagpedia.net/portugal/download/vector)
+- [ドイツの国旗](https://flagpedia.net/germany/download/vector)
+- [スイスの国旗](https://flagpedia.net/switzerland/download/vector)
+- [ギリシャの国旗](https://flagpedia.net/greece/download/vector)
+- [オランダの国旗](https://flagpedia.net/the-netherlands/download/vector)
 
 ### 観光名所
 - [Unsplash](https://unsplash.com/ja/%E5%86%99%E7%9C%9F/eiffel-tower-during-daytime-Q0-fOL2nqZc)の[Anthony DELANOIX](https://unsplash.com/ja/@anthonydelanoix)が撮影した写真
