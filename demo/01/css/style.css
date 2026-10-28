@@ -14,8 +14,7 @@ main {
   }
 
   .table-scroll {
-    /* 横方向だけスクロールさせる */
-    overflow: auto clip;
+    overflow: auto clip; /* 横方向だけスクロールさせる */
 
     table {
       width: max-content;
@@ -65,16 +64,14 @@ main {
 
       tbody {
         th[scope="rowgroup"] {
-          /* 行見出しをテーブル左側に固定 */
-          position: sticky;
+          position: sticky; /* 行見出しをテーブル左側に固定 */
           left: 0;
           z-index: 2;
           vertical-align: top;
         }
 
         th[scope="row"] {
-          /* 行見出しをテーブル左側に固定 */
-          position: sticky;
+          position: sticky; /* 行見出しをテーブル左側に固定 */
           left: 160px; /* 1セル分右側で固定させる */
           z-index: 1;
           font-size: 14px;

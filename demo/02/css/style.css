@@ -14,8 +14,7 @@ main {
   }
 
   .table-scroll {
-    /* 横方向だけスクロールさせる */
-    overflow: auto clip;
+    overflow: auto clip; /* 横方向だけスクロールさせる */
     display: grid;
     grid-template-columns: max-content;
     container-type: scroll-state; /* スクロール状態を判定可能に */
@@ -49,8 +48,7 @@ main {
       }
 
       thead {
-        /* 列見出しを上部に固定 */
-        position: sticky;
+        position: sticky; /* 列見出しを上部に固定 */
         top: 0;
         z-index: var(--z-index-sticky-corner);
         container-type: scroll-state; /* スクロール状態を判定可能に */
@@ -185,6 +183,7 @@ main {
         }
       }
 
+      /* thead内のth要素にも干渉するため、tbodyの外側で指定 */
       .row-heading {
         /* 境界で影が途切れないよう、外側へ向かうグラデーションを使う */
         &::after {
@@ -207,6 +206,7 @@ main {
       }
     }
 
+    /* テーブル右側 スクロール領域が存在する際に表示する影 */
     /* テーブルと同じ領域に重ね、表示範囲の右端へ追従させる */
     .scroll-shadow {
       grid-area: 1 / 1;

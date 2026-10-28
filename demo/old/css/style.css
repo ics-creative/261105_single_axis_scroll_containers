@@ -16,8 +16,7 @@ main {
 
   /* tableの共通スタイル */
   .table-scroll {
-    /* 横スクロールを有効にする */
-    overflow-x: auto;
+    overflow-x: auto; /* 横スクロールを有効にする */
 
     table {
       width: max-content;
@@ -48,8 +47,7 @@ main {
 
       thead {
         th {
-          /* 列見出しの横方向の固定（画面上部への固定はJSで制御） */
-          position: sticky;
+          position: sticky; /* 列見出しの横方向の固定（画面上部への固定はJavaScriptで制御） */
           top: 0;
           z-index: 2;
 
@@ -67,16 +65,14 @@ main {
 
       tbody {
         th[scope="rowgroup"] {
-          /* 行見出しをテーブル左側に固定 */
-          position: sticky;
+          position: sticky; /* 行見出しをテーブル左側に固定 */
           left: 0;
           z-index: 2;
           vertical-align: top;
         }
 
         th[scope="row"] {
-          /* 行見出しをテーブル左側に固定 */
-          position: sticky;
+          position: sticky; /* 行見出しをテーブル左側に固定 */
           left: 160px; /* 1セル分右側で固定させる */
           z-index: 1;
           font-size: 14px;
@@ -107,7 +103,7 @@ main {
     position: fixed;
     top: 0;
     z-index: 6;
-    /* scrollLeftをJSで同期するため、clipではなくhiddenを使う */
+    /* scrollLeftをJSで同期するため、clipではなくhiddenを使用 */
     overflow-x: hidden;
     visibility: hidden;
     pointer-events: none;
@@ -115,7 +111,6 @@ main {
 
   /* 高さを指定して列見出しを追従させる */
   .table-scroll-height {
-    /* 高さを指定すると、枠内の縦スクロールに対して見出しを固定できる */
     height: 400px;
   }
 }
