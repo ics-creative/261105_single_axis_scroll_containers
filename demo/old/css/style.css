@@ -14,6 +14,7 @@ main {
     margin-bottom: 24px;
   }
 
+  /* tableの共通スタイル */
   .table-scroll {
     /* 横スクロールを有効にする */
     overflow-x: auto;
@@ -49,6 +50,7 @@ main {
         th {
           /* 列見出しの横方向の固定（画面上部への固定はJSで制御） */
           position: sticky;
+          top: 0;
           z-index: 2;
 
           &:first-child {
@@ -100,17 +102,7 @@ main {
     }
   }
 
-  .table-scroll-height {
-    /* 高さを指定すると、枠内の縦スクロールに対して見出しを固定できる */
-    height: 400px;
-
-    thead {
-      th {
-        top: 0;
-      }
-    }
-  }
-
+  /* 列見出しを追従させる */
   .table-header {
     position: fixed;
     top: 0;
@@ -119,6 +111,12 @@ main {
     overflow-x: hidden;
     visibility: hidden;
     pointer-events: none;
+  }
+
+  /* 高さを指定して列見出しを追従させる */
+  .table-scroll-height {
+    /* 高さを指定すると、枠内の縦スクロールに対して見出しを固定できる */
+    height: 400px;
   }
 }
 

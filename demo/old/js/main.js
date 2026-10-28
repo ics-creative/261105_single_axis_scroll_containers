@@ -1,3 +1,6 @@
+/**
+ * @file GSAPで表の上見出しを画面上端に固定し、横スクロールや表のサイズ変更に追従させる処理をしています。
+ */
 gsap.registerPlugin(ScrollTrigger);
 
 const tableScroll = document.getElementById("timeline-scroll");
