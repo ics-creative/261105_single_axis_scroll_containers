@@ -12,513 +12,517 @@
   </head>
   <body>
     <main>
-      <h2 class="demo-title">Project Timeline (GSAP)</h2>
-      <p class="lead-text">
-        <span lang="ja">
-          表が画面上端に達すると、GSAPで上見出しを固定し、横スクロールにも追従させます。
-        </span>
-        <br />
-        When the table reaches the top of the viewport, GSAP pins the column headings there and
-        keeps them in sync with horizontal scrolling.
-      </p>
+      <section id="gsap">
+        <h2 class="demo-title">Project Timeline (GSAP)</h2>
+        <p class="lead-text">
+          <span lang="ja">
+            表が画面上端に達すると、GSAPで上見出しを固定し、横スクロールにも追従させます。
+          </span>
+          <br />
+          When the table reaches the top of the viewport, GSAP pins the column headings there and
+          keeps them in sync with horizontal scrolling.
+        </p>
 
-      <div id="timeline-scroll" class="table-scroll">
-        <table id="timeline-table">
-          <thead>
-            <tr>
-              <th scope="col">Phase</th>
-              <th scope="col">Task</th>
-              <th scope="col">April</th>
-              <th scope="col">May</th>
-              <th scope="col">June</th>
-              <th scope="col">July</th>
-              <th scope="col">August</th>
-              <th scope="col">September</th>
-              <th scope="col">October</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="2">Planning</th>
-              <th scope="row">Concept Development</th>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Clarify Issues and Goals</th>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Requirements</th>
-              <th scope="row">Current State Analysis</th>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Stakeholder Interviews</th>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Requirements Definition</th>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Requirements Review</th>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Design</th>
-              <th scope="row">Information Architecture</th>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Screen Design</th>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">UI Design</th>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">API Design</th>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="5">Development</th>
-              <th scope="row">Development Environment Setup</th>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Frontend Development</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">API Development</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="3"><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Data Migration</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Code Review</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Testing</th>
-              <th scope="row">Unit Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Integration Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Acceptance Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Bug Fixes</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="3">Release</th>
-              <th scope="row">Release Planning</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Production Release</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Retrospective</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div id="timeline-scroll" class="table-scroll">
+          <table id="timeline-table">
+            <thead>
+              <tr>
+                <th scope="col">Phase</th>
+                <th scope="col">Task</th>
+                <th scope="col">April</th>
+                <th scope="col">May</th>
+                <th scope="col">June</th>
+                <th scope="col">July</th>
+                <th scope="col">August</th>
+                <th scope="col">September</th>
+                <th scope="col">October</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="2">Planning</th>
+                <th scope="row">Concept Development</th>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Clarify Issues and Goals</th>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Requirements</th>
+                <th scope="row">Current State Analysis</th>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Stakeholder Interviews</th>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Requirements Definition</th>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Requirements Review</th>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Design</th>
+                <th scope="row">Information Architecture</th>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Screen Design</th>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">UI Design</th>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">API Design</th>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="5">Development</th>
+                <th scope="row">Development Environment Setup</th>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Frontend Development</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">API Development</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="3"><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Data Migration</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Code Review</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Testing</th>
+                <th scope="row">Unit Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Integration Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Acceptance Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Bug Fixes</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="3">Release</th>
+                <th scope="row">Release Planning</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Production Release</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Retrospective</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      <h2 class="demo-title">Project Timeline (Fixed Height)</h2>
-      <p class="lead-text">
-        <span lang="ja">
-          高さを指定した枠内で表を縦横にスクロールでき、CSSだけで上見出しを枠の上端に固定します。
-        </span>
-        <br />
-        The table can be scrolled horizontally and vertically within a container with an explicit
-        height. CSS alone keeps the column headings pinned to the top of the container.
-      </p>
+      <section id="fixed-height">
+        <h2 class="demo-title">Project Timeline (Fixed Height)</h2>
+        <p class="lead-text">
+          <span lang="ja">
+            高さを指定した枠内で表を縦横にスクロールでき、CSSだけで上見出しを枠の上端に固定します。
+          </span>
+          <br />
+          The table can be scrolled horizontally and vertically within a container with an explicit
+          height. CSS alone keeps the column headings pinned to the top of the container.
+        </p>
 
-      <div id="fixed-height-scroll" class="table-scroll table-scroll-height">
-        <table id="fixed-height-table">
-          <thead>
-            <tr>
-              <th scope="col">Phase</th>
-              <th scope="col">Task</th>
-              <th scope="col">April</th>
-              <th scope="col">May</th>
-              <th scope="col">June</th>
-              <th scope="col">July</th>
-              <th scope="col">August</th>
-              <th scope="col">September</th>
-              <th scope="col">October</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="2">Planning</th>
-              <th scope="row">Concept Development</th>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Clarify Issues and Goals</th>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Requirements</th>
-              <th scope="row">Current State Analysis</th>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Stakeholder Interviews</th>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Requirements Definition</th>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Requirements Review</th>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Design</th>
-              <th scope="row">Information Architecture</th>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Screen Design</th>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">UI Design</th>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">API Design</th>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="5">Development</th>
-              <th scope="row">Development Environment Setup</th>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Frontend Development</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">API Development</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="3"><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Data Migration</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Code Review</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4">Testing</th>
-              <th scope="row">Unit Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Integration Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Acceptance Testing</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Bug Fixes</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="3">Release</th>
-              <th scope="row">Release Planning</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td colspan="2"><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Production Release</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-            <tr>
-              <th scope="row">Retrospective</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="bar"></span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div id="fixed-height-scroll" class="table-scroll table-scroll-height">
+          <table id="fixed-height-table">
+            <thead>
+              <tr>
+                <th scope="col">Phase</th>
+                <th scope="col">Task</th>
+                <th scope="col">April</th>
+                <th scope="col">May</th>
+                <th scope="col">June</th>
+                <th scope="col">July</th>
+                <th scope="col">August</th>
+                <th scope="col">September</th>
+                <th scope="col">October</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="2">Planning</th>
+                <th scope="row">Concept Development</th>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Clarify Issues and Goals</th>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Requirements</th>
+                <th scope="row">Current State Analysis</th>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Stakeholder Interviews</th>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Requirements Definition</th>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Requirements Review</th>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Design</th>
+                <th scope="row">Information Architecture</th>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Screen Design</th>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">UI Design</th>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">API Design</th>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="5">Development</th>
+                <th scope="row">Development Environment Setup</th>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Frontend Development</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">API Development</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="3"><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Data Migration</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Code Review</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4">Testing</th>
+                <th scope="row">Unit Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Integration Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Acceptance Testing</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Bug Fixes</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="3">Release</th>
+                <th scope="row">Release Planning</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Production Release</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Retrospective</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="bar"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </body>
 </html>
