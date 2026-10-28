@@ -4,6 +4,7 @@ ICS MEDIAの記事「CSSだけで横スクロールと見出し固定を両立�
 
 - [プロジェクト工程表](demo/01/index.html)
 - [ヨーロッパの国別比較表](demo/02/index.html)
+- [プロジェクト工程表（従来のJavaScriptによる実装）](demo/old/index.html)
 
 ## 画像の出典
 

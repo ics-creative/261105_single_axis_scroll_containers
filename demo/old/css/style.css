@@ -1,0 +1,158 @@
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 40px 40px 80vh;
+
+  .demo-title {
+    &:not(:first-child) {
+      margin-top: 64px;
+    }
+  }
+
+  .lead-text {
+    margin-bottom: 24px;
+  }
+
+  .table-scroll {
+    /* 横スクロールを有効にする */
+    overflow-x: auto;
+
+    table {
+      width: max-content;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+
+      th,
+      td {
+        box-sizing: border-box;
+        width: 180px;
+        padding: 12px;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-surface);
+        text-align: left;
+      }
+
+      th {
+        &:first-child {
+          width: 160px;
+        }
+
+        &:nth-child(2) {
+          width: 220px;
+        }
+      }
+
+      thead {
+        th {
+          /* 列見出しの横方向の固定（画面上部への固定はJSで制御） */
+          position: sticky;
+          z-index: 2;
+
+          &:first-child {
+            left: 0;
+            z-index: 5;
+          }
+
+          &:nth-child(2) {
+            left: 160px;
+            z-index: 4;
+          }
+        }
+      }
+
+      tbody {
+        th[scope="rowgroup"] {
+          /* 行見出しをテーブル左側に固定 */
+          position: sticky;
+          left: 0;
+          z-index: 2;
+          vertical-align: top;
+        }
+
+        th[scope="row"] {
+          /* 行見出しをテーブル左側に固定 */
+          position: sticky;
+          left: 160px; /* 1セル分右側で固定させる */
+          z-index: 1;
+          font-size: 14px;
+        }
+
+        tr:hover {
+          > th[scope="row"],
+          > td {
+            background-color: color-mix(in srgb, var(--color-heading) 8%, white);
+          }
+        }
+
+        &:has(tr:hover) > tr:first-child > th[scope="rowgroup"] {
+          background-color: color-mix(in srgb, var(--color-heading) 8%, white);
+        }
+      }
+
+      .bar {
+        display: block;
+        height: 16px;
+        background: var(--color-heading);
+      }
+    }
+  }
+
+  .table-scroll-height {
+    /* 高さを指定すると、枠内の縦スクロールに対して見出しを固定できる */
+    height: 400px;
+
+    thead {
+      th {
+        top: 0;
+      }
+    }
+  }
+
+  .table-header {
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    /* scrollLeftをJSで同期するため、clipではなくhiddenを使う */
+    overflow-x: hidden;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (width < 768px) {
+  main .table-scroll table {
+    th,
+    td {
+      width: 140px;
+    }
+
+    th {
+      &:first-child {
+        width: 120px;
+      }
+
+      &:nth-child(2) {
+        width: 180px;
+      }
+    }
+
+    thead {
+      th {
+        &:nth-child(2) {
+          left: auto;
+          z-index: 2;
+        }
+      }
+    }
+
+    tbody {
+      th[scope="row"] {
+        position: static;
+        left: auto;
+        z-index: auto;
+      }
+    }
+  }
+}
