@@ -3,10 +3,6 @@ main {
   margin-inline: auto;
   padding: 40px 40px 80vh;
 
-  .lead-text {
-    margin-bottom: 24px;
-  }
-
   /* tableのスタイル */
   .table-scroll {
     height: 400px; /* 高さを指定して、枠内を縦スクロールできるようにする */

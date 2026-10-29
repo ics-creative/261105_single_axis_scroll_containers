@@ -28,14 +28,3 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
 }
-
-.demo-title {
-  margin-bottom: 24px;
-  color: var(--color-primary);
-  font-size: 42px;
-  font-weight: bold;
-}
-
-.bold-text {
-  font-weight: bold;
-}
