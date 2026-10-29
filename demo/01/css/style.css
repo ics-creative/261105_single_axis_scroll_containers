@@ -5,7 +5,7 @@ main {
 
   h1 {
     margin-bottom: 40px;
-    color: var(--color-heading);
+    color: var(--color-primary);
     font-size: 42px;
   }
 
@@ -34,6 +34,10 @@ main {
       }
 
       th {
+        border-color: var(--color-primary);
+        background: var(--color-secondary);
+        color: var(--color-primary);
+
         &:first-child {
           width: 160px;
         }
@@ -45,6 +49,9 @@ main {
 
       thead {
         th {
+          border-color: var(--color-surface);
+          background: var(--color-primary);
+          color: var(--color-surface);
           /* 列見出しを画面上部に固定 */
           position: sticky;
           top: 0;
@@ -78,21 +85,16 @@ main {
         }
 
         tr:hover {
-          > th[scope="row"],
           > td {
-            background-color: color-mix(in srgb, var(--color-heading) 8%, white);
+            background-color: color-mix(in srgb, var(--color-primary) 8%, white);
           }
-        }
-
-        &:has(tr:hover) > tr:first-child > th[scope="rowgroup"] {
-          background-color: color-mix(in srgb, var(--color-heading) 8%, white);
         }
       }
 
       .bar {
         display: block;
         height: 16px;
-        background: var(--color-heading);
+        background: var(--color-primary);
       }
     }
   }

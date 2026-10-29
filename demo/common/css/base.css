@@ -3,7 +3,8 @@
   --color-surface: #fff;
   --color-text: #222;
   --color-border: #c8c8c8;
-  --color-heading: #3223b3;
+  --color-primary: #3223b3;
+  --color-secondary: #EBE9FC;
   --z-index-sticky-row: 1;
   --z-index-sticky-corner: 2;
   --ease-expo-out: cubic-bezier(0.19, 1, 0.22, 1);
@@ -30,7 +31,7 @@ body {
 
 .demo-title {
   margin-bottom: 24px;
-  color: var(--color-heading);
+  color: var(--color-primary);
   font-size: 42px;
   font-weight: bold;
 }
