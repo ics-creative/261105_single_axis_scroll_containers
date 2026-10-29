@@ -1,21 +1,15 @@
 main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  row-gap: 120px;
   max-width: 1200px;
   margin-inline: auto;
   padding: 40px 40px 80vh;
-
-  section {
-    padding-block: 32px;
-  }
 
   .lead-text {
     margin-bottom: 24px;
   }
 
-  /* tableの共通スタイル */
+  /* tableのスタイル */
   .table-scroll {
+    height: 400px; /* 高さを指定して、枠内を縦スクロールできるようにする */
     overflow-x: auto; /* 横スクロールを有効にする */
 
     table {
@@ -47,7 +41,7 @@ main {
 
       thead {
         th {
-          position: sticky; /* 列見出しの横方向の固定（画面上部への固定はJavaScriptで制御） */
+          position: sticky; /* 列見出しをスクロール枠の上端に固定 */
           top: 0;
           z-index: 2;
 
@@ -96,22 +90,6 @@ main {
         background: var(--color-heading);
       }
     }
-  }
-
-  /* 列見出しを追従させる */
-  .table-header {
-    position: fixed;
-    top: 0;
-    z-index: 6;
-    /* scrollLeftをJSで同期するため、clipではなくhiddenを使用 */
-    overflow-x: hidden;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  /* 高さを指定して列見出しを追従させる */
-  .table-scroll-height {
-    height: 400px;
   }
 }
 
