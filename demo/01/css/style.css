@@ -4,53 +4,86 @@ main {
   padding: 40px 40px 60vh;
 
   /* トグルボタン */
-  .toggle {
-    position: relative;
-    width: fit-content;
+  .control {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-bottom: 40px;
-    border: 1px solid var(--color-primary);
-    border-radius: 100vmax;
-    background: var(--color-surface);
-    &:after {
-      content: "";
-      position: absolute;
-      inset: anchor(--checked start);
-      inline-size: anchor-size(--checked inline);
-      block-size: anchor-size(--checked block);
+    .toggle {
+      position: relative;
+      width: fit-content;
+      border: 1px solid var(--color-primary);
       border-radius: 100vmax;
-      background: var(--color-primary);
-      pointer-events: none;
-      transition-duration: 0.3s;
-      transition-property: inset, inline-size, block-size;
-      transition-timing-function: var(--ease-expo-out);
+      background: var(--color-surface);
+      &:after {
+        content: "";
+        position: absolute;
+        inset: anchor(--checked start);
+        inline-size: anchor-size(--checked inline);
+        block-size: anchor-size(--checked block);
+        border-radius: 100vmax;
+        background: var(--color-primary);
+        pointer-events: none;
+        transition-duration: 0.3s;
+        transition-property: inset, inline-size, block-size;
+        transition-timing-function: var(--ease-expo-out);
+      }
+
+      .toggle-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        padding: 8px 16px;
+
+        label {
+          cursor: pointer;
+          input {
+            display: none;
+          }
+          span {
+            display: inline-block;
+            padding: 4px 16px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s var(--ease-expo-out);
+          }
+          &:has(input:checked) {
+            anchor-name: --checked;
+            color: var(--color-surface);
+          }
+        }
+      }
     }
 
-    .toggle-inner {
+    > p {
+      font-size: 28px;
+      font-weight: bold;
       position: relative;
-      z-index: 1;
-      display: flex;
-      padding: 8px 16px;
+      width: fit-content;
+      &:before {
+        content: '';
+        background: url(../../common/images/icon-notice.svg) center / contain no-repeat;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        top: -2px;
+        right: -18px;
+      }
+    }
 
-      label {
-        cursor: pointer;
-        input {
-          display: none;
-        }
-        span {
-          display: inline-block;
-          padding: 4px 16px;
-          font-size: 18px;
-          font-weight: bold;
-          transition: color 0.3s var(--ease-expo-out);
-        }
-        &:has(input:checked) {
-          anchor-name: --checked;
-          color: var(--color-surface);
+    &:has(input[value="hidden"]:checked) {
+      & > p {
+        opacity: 0.5;
+        text-decoration: line-through;
+        &:before {
+          content: none;
         }
       }
     }
   }
 
+  /* 工程表 */
   &:has(input[value="clip"]:checked) {
     .table-scroll {
       overflow: auto clip; /* 横方向だけスクロールさせる */
