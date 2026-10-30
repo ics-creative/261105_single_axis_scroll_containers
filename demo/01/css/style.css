@@ -3,9 +3,67 @@ main {
   margin-inline: auto;
   padding: 40px 40px 80vh;
 
-  .table-scroll {
-    overflow: auto clip; /* 横方向だけスクロールさせる */
+  /* トグルボタン */
+  .toggle {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 100vmax;
+    background: var(--color-surface);
+    &:after {
+      content: "";
+      position: absolute;
+      inset: anchor(--checked start);
+      inline-size: anchor-size(--checked inline);
+      block-size: anchor-size(--checked block);
+      border-radius: 100vmax;
+      background: var(--color-primary);
+      pointer-events: none;
+      transition-duration: 0.3s;
+      transition-property: inset, inline-size, block-size;
+      transition-timing-function: var(--ease-expo-out);
+    }
 
+    .toggle-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      padding: 8px 16px;
+
+      label {
+        cursor: pointer;
+        input {
+          display: none;
+        }
+        span {
+          display: inline-block;
+          padding: 4px 16px;
+          font-size: 18px;
+          font-weight: bold;
+          transition: color 0.3s var(--ease-expo-out);
+        }
+        &:has(input:checked) {
+          anchor-name: --checked;
+          color: var(--color-surface);
+        }
+      }
+    }
+  }
+
+  &:has(input[value="clip"]:checked) {
+    .table-scroll {
+      overflow: auto clip; /* 横方向だけスクロールさせる */
+    }
+  }
+
+  &:has(input[value="hidden"]:checked) {
+    .table-scroll {
+      overflow: auto hidden; /* 縦方向もスクロールコンテナーとして認識される */
+    }
+  }
+
+  .table-scroll {
     table {
       width: max-content;
       border-collapse: separate;
@@ -91,36 +149,45 @@ main {
 }
 
 @media (width < 768px) {
-  main .table-scroll table {
-    th,
-    td {
-      width: 140px;
-    }
-
-    th {
-      &:first-child {
-        width: 120px;
-      }
-
-      &:nth-child(2) {
-        width: 180px;
+  main {
+    .toggle {
+      border-radius: 20px;
+      .toggle-inner {
+        flex-direction: column;
       }
     }
 
-    thead {
+    .table-scroll table {
+      th,
+      td {
+        width: 140px;
+      }
+
       th {
+        &:first-child {
+          width: 120px;
+        }
+
         &:nth-child(2) {
-          left: auto;
-          z-index: 2;
+          width: 180px;
         }
       }
-    }
 
-    tbody {
-      th[scope="row"] {
-        position: static;
-        left: auto;
-        z-index: auto;
+      thead {
+        th {
+          &:nth-child(2) {
+            left: auto;
+            z-index: 2;
+          }
+        }
+      }
+
+      tbody {
+        th[scope="row"] {
+          position: static;
+          left: auto;
+          z-index: auto;
+        }
       }
     }
   }
